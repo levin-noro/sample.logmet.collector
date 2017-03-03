@@ -5,3 +5,6 @@
 4. If uploading a new Kibana 4 dashboard, create a folder with the name of the product and place the dashboards, visualizations, and searches json files in that folder. Or if updating an existing dashboard, simply replace the three existing json files. Note: the folder name and \<product\> must be exactly the same. For instance, the "twas-kibana4-visualizations.json" file should be placed in the "twas" folder.
 5. Submit a pull request.
 
+### When updating existing dashboards, searches, or visualizations:
+You must rename the "\_id" and the "title" for each dashboard, search, or visualization you modify. This insures that any previously published dashboards, searches, or visualizations will not be overwritten.
+
