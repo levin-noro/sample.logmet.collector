@@ -1,0 +1,27 @@
+[
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_Complete-list-of-log-entries-for-all-queue-managers",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "host",
+        "ibm_qmgrName",
+        "ibm_messageId",
+        "message",
+        "ibm_userAction"
+      ],
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[]}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Complete list of log entries for all queue managers",
+      "version": 1
+    }
+  }
+]
