@@ -1,0 +1,58 @@
+[
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_Overview",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+      },
+      "title": "Overview",
+      "version": 1,
+      "visState": "{\"type\":\"markdown\",\"params\":{\"markdown\":\"## IBM MQ ***AMQERR log entries*** dashboard overview\\n> *This dashboard has a collection of Visualizations that present aspects of IBM MQ queue manager log entries in useful ways.*\\n\\n### The Visualizations present the entries in following ways:\\n\\n\\n#### Area chart. Number of log entries per queue manager in 30 min intervals \\n\\n  Shows the **rate at which the queue managers are writing entries to their AMQERR01.LOG** file. Information is shown for only the 25 queue managers that logged the most entries.\\n* *Click a line in the split bar chart area to view activity for one queue manager.*\\n\\n#### Bar chart. Number of entries per logged entry code (AMQnnn), split by queue manager \\n\\n*Ranks the most frequently occurring entry codes in your IBM MQ network. Information is shown for only the 25 queue managers that logged the most entries.*\\n* *Click a split bar (queue manager color) to view activity for one queue manager.*\\n\\n#### Data table. Host, queue manager name, and log entry count\\n\\n   Shows the number of log entries per queue manager and host.\\n\\n*Information is shown for only the 25 queue managers that logged the most entries. If multiple queue managers are running on a single host, then the list shows data from all the queue managers on that host.*\\n* *Click a queue manager or host name to view information about their activity.*\\n\\n#### Data table. A complete list of log files for all queue managers and hosts in an interval.\\n\\n*A list of all **AMQ log files** that are used for generating the chart and table data in the three other visualizations in this dashboard. The most significant fields are displayed.*\\n* *Click a row in the table to view more information about the log.*\\n\\n### Note \\n* If you cannot find a queue manager or host in the Visualizations, it might be because they are not among the 25 queue managers or hosts with the most log entries.\\n\\n* Use the search at the top center of the dashboard to find queue managers and hosts that are not on the list, for example:\\n         > ibm_qmgrName.raw: MQQM\\n         > host.raw: localhost\"},\"aggs\":[],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_Log-entries-per-queue-manager-in-30-min-intervals",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "title": "Log entries per queue manager in 30 min intervals",
+      "version": 1,
+      "visState": "{\"type\":\"area\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"smoothLines\":false,\"scale\":\"linear\",\"interpolate\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"ibm_qmgrName.raw\",\"size\":25,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_Number-of-entries-per-logged-entry-code-(AMQnnn),-split-by-queue-manager",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "title": "Number of entries per logged entry code (AMQnnn), split by queue manager",
+      "version": 1,
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"ibm_messageId.raw\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"ibm_qmgrName.raw\",\"size\":25,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_Host,-queue-manager-name,-and-log-entry-count",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "title": "Host, queue manager name, and log entry count",
+      "version": 1,
+      "visState": "{\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"host.raw\",\"size\":25,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"ibm_qmgrName.raw\",\"size\":25,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+    }
+  }
+]
