@@ -205,7 +205,7 @@
       },
       "title": "WAS Problems Dashboard",
       "version": 1,
-      "visState": "{\"type\":\"markdown\",\"params\":{\"markdown\":\"This dashboard visualizes WAS system message information. In order to visualize the data, configure the c2clogging.yml to use the WAS SystemOut and SystemErr prospectors.\\n Filters can be applied by clicking on a host, an user directory, a server name or a tag shown on the dashboard.\"},\"aggs\":[],\"listeners\":{}}"
+      "visState": "{\"type\":\"markdown\",\"params\":{\"markdown\":\"This dashboard visualizes WAS system message information. In order to visualize the data, configure the c2clogging.yml to use the WAS SystemOut and SystemErr prospectors.\\n\\n Initially, the visualizations will show *'Could not locate that index-pattern-field'* due to the index not being generated. Ensure all log types are being sent to Kibana using the Discover tab. Go to Settings -> Indices -> logstash-<UUID> and click on the yellow refresh button to generate the index. The dashboards will now be populated with data.\\n\\n Filters can be applied by clicking on a host, an user directory, a server name or a tag shown on the dashboard.\"},\"aggs\":[],\"listeners\":{}}"
     }
   },
   {
@@ -247,7 +247,7 @@
       },
       "title": "WAS Traffic Dashboard",
       "version": 1,
-      "visState": "{\"type\":\"markdown\",\"params\":{\"markdown\":\"This dashboard visualizes access logging information. In order to visualize the data, configure the c2clogging.yml to use the IHS access_log or WAS access_log prospector. The duration numbers are shown in microseconds. \\n Filters can be applied by clicking on a host, an user directory, a server name or a tag shown on the dashboard.\"},\"aggs\":[],\"listeners\":{}}"
+      "visState": "{\"type\":\"markdown\",\"params\":{\"markdown\":\"This dashboard visualizes access logging information. In order to visualize the data, configure the c2clogging.yml to use the IHS access_log or WAS access_log prospector. The duration numbers are shown in microseconds.\\n\\n Initially, the visualizations will show *'Could not locate that index-pattern-field'* due to the index not being generated. Ensure all log types are being sent to Kibana using the Discover tab. Go to Settings -> Indices -> logstash-<UUID> and click on the yellow refresh button to generate the index. The dashboards will now be populated with data.\\n\\n Filters can be applied by clicking on a host, an user directory, a server name or a tag shown on the dashboard.\"},\"aggs\":[],\"listeners\":{}}"
     }
   },
   {
