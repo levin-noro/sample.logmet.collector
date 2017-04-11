@@ -1,6 +1,6 @@
 [
   {
-    "_id": "SPACE_ID_PLACE_HOLDER_Liberty-Problems-K4-20170407-experimental",
+    "_id": "SPACE_ID_PLACE_HOLDER_Liberty-Problems-K4-20170407",
     "_type": "dashboard",
     "_source": {
       "description": "",
@@ -16,7 +16,7 @@
     }
   },
   {
-    "_id": "SPACE_ID_PLACE_HOLDER_Liberty-Memory-K4-20170407-experimental",
+    "_id": "SPACE_ID_PLACE_HOLDER_Liberty-Memory-K4-20170407",
     "_type": "dashboard",
     "_source": {
       "description": "",
@@ -32,7 +32,7 @@
     }
   },
   {
-    "_id": "SPACE_ID_PLACE_HOLDER_Liberty-Traffic-K4-20170407-experimental",
+    "_id": "SPACE_ID_PLACE_HOLDER_Liberty-Traffic-K4-20170407",
     "_type": "dashboard",
     "_source": {
       "description": "",
