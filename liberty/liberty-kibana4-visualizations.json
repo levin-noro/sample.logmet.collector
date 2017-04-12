@@ -380,7 +380,7 @@
       },
       "title": "Liberty Memory Dashboard",
       "version": 1,
-      "visState": "{\n\"type\": \"markdown\",\n\"params\": {\n\"markdown\": \"Dashboard visualizes the garbage collection duration and JVM heap usage information. Duration numbers are in microseconds. Garbage collection data is only available from Liberty servers running on an IBM JDK. Configure the Liberty bluemixLogCollector/logstashCollector feature to use the garbageCollection source.\\n Click on host, user directory, server name or tag to filter the content shown on the dashboard.\"\n},\n\"aggs\": [],\n\"listeners\": {}\n}"
+      "visState": "{\n\"type\": \"markdown\",\n\"params\": {\n\"markdown\": \"Dashboard visualizes the garbage collection duration and JVM heap usage information. Duration numbers are in microseconds. Garbage collection data is only available from Liberty servers running on an IBM JDK. Configure the Liberty bluemixLogCollector feature to use the garbageCollection source.\\n Click on host, user directory, server name or tag to filter the content shown on the dashboard.\"\n},\n\"aggs\": [],\n\"listeners\": {}\n}"
     }
   },
   {
@@ -394,7 +394,7 @@
       },
       "title": "Liberty Traffic Dashboard",
       "version": 1,
-      "visState": "{\n\"type\": \"markdown\",\n\"params\": {\n\"markdown\": \"Dashboard visualizes access logging information. Duration numbers are in microseconds. Configure accessLogging in your Liberty server.xml file and configure the bluemixLogCollector/logstashCollector feature to use the accessLog source.\\n Click on host, user directory, server name or tag to filter the content shown on the dashboard.\"\n},\n  \"aggs\": [],\n\"listeners\": {}\n}"
+      "visState": "{\n\"type\": \"markdown\",\n\"params\": {\n\"markdown\": \"Dashboard visualizes access logging information. Duration numbers are in microseconds. Configure accessLogging in your Liberty server.xml file and configure the bluemixLogCollector feature to use the accessLog source.\\n Click on host, user directory, server name or tag to filter the content shown on the dashboard.\"\n},\n  \"aggs\": [],\n\"listeners\": {}\n}"
     }
   },
   {
@@ -408,7 +408,7 @@
       },
       "title": "Liberty Problems Dashboard",
       "version": 1,
-      "visState": "{\n\"type\": \"markdown\",\n\"params\": {\n\"markdown\": \"Dashboard visualizes message, trace and FFDC information. Configure the Liberty bluemixLogCollector/logstashCollector feature to use the message, trace and ffdc sources.\\n Click on host, user directory, server name or tag to filter the content shown on the dashboard.\"\n},\n\"aggs\": [],\n\"listeners\": {}\n}"
+      "visState": "{\n\"type\": \"markdown\",\n\"params\": {\n\"markdown\": \"Dashboard visualizes message, trace and FFDC information. Configure the Liberty bluemixLogCollector feature to use the message, trace and ffdc sources.\\n Click on host, user directory, server name or tag to filter the content shown on the dashboard.\"\n},\n\"aggs\": [],\n\"listeners\": {}\n}"
     }
   }
 ]
