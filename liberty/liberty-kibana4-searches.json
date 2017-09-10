@@ -4,10 +4,10 @@
     "_type": "search",
     "_source": {
       "columns": [
-        "loglevel",
-        "module",
+        "loglevel_str",
+        "module_str",
         "message",
-        "ibm_sequence"
+        "ibm_sequence_str"
       ],
       "description": "",
       "group": "SPACE_ID_PLACE_HOLDER",
@@ -16,7 +16,7 @@
         "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"query\":{\"query_string\":{\"query\":\"_type:liberty_message\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647}}"
       },
       "sort": [
-        "ibm_sequence",
+        "ibm_sequence_str.keyword",
         "desc"
       ],
       "title": "Liberty Messages Search",
@@ -28,10 +28,10 @@
     "_type": "search",
     "_source": {
       "columns": [
-        "ibm_className",
-        "ibm_probeID",
-        "ibm_exceptionName",
-        "ibm_sequence"
+        "ibm_className_str",
+        "ibm_probeID_str",
+        "ibm_exceptionName_str",
+        "ibm_sequence_str"
       ],
       "description": "",
       "group": "SPACE_ID_PLACE_HOLDER",
@@ -40,7 +40,7 @@
         "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"type:liberty_ffdc\"}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647}}"
       },
       "sort": [
-        "ibm_sequence.raw",
+        "ibm_sequence_str.keyword",
         "desc"
       ],
       "title": "Liberty FFDC Search",
@@ -52,12 +52,12 @@
     "_type": "search",
     "_source": {
       "columns": [
-        "ibm_gcType",
-        "ibm_usedHeap",
-        "ibm_heap",
-        "ibm_maxHeap",
-        "ibm_duration",
-        "ibm_sequence"
+        "ibm_gcType_str",
+        "ibm_usedHeap_int",
+        "ibm_heap_int",
+        "ibm_maxHeap_int",
+        "ibm_duration_int",
+        "ibm_sequence_str"
       ],
       "description": "",
       "group": "SPACE_ID_PLACE_HOLDER",
@@ -66,7 +66,7 @@
         "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"query\":{\"query_string\":{\"query\":\"type:liberty_gc\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647}}"
       },
       "sort": [
-        "ibm_sequence",
+        "ibm_sequence_str.keyword",
         "desc"
       ],
       "title": "Liberty GC Search",
@@ -84,7 +84,7 @@
       "group": "SPACE_ID_PLACE_HOLDER",
       "hits": 0,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"query\":\"type:\\\"liberty_accesslog\\\" AND !ibm_responseCode:\\\"200\\\"\",\"analyze_wildcard\":true}}}"
+        "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"query\":\"type:\\\"liberty_accesslog\\\" AND !ibm_responseCode_int:\\\"200\\\"\",\"analyze_wildcard\":true}}}"
       },
       "sort": [
         "@timestamp",
@@ -99,10 +99,10 @@
     "_type": "search",
     "_source": {
       "columns": [
-        "loglevel",
-        "module",
+        "loglevel_str",
+        "module_str",
         "message",
-        "ibm_sequence"
+        "ibm_sequence_str"
       ],
       "description": "",
       "group": "SPACE_ID_PLACE_HOLDER",
@@ -111,7 +111,7 @@
         "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"query\":{\"query_string\":{\"query\":\"type:liberty_trace\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647}}"
       },
       "sort": [
-        "ibm_sequence",
+        "ibm_sequence_str.keyword",
         "desc"
       ],
       "title": "Liberty Trace Search",
@@ -144,12 +144,12 @@
     "_type": "search",
     "_source": {
       "columns": [
-        "ibm_remoteHost",
-        "ibm_uriPath",
-        "ibm_responseCode",
-        "ibm_bytesReceived",
-        "ibm_elapsedTime",
-        "ibm_sequence"
+        "ibm_remoteHost_str",
+        "ibm_uriPath_str",
+        "ibm_responseCode_int",
+        "ibm_bytesReceived_int",
+        "ibm_elapsedTime_int",
+        "ibm_sequence_str"
       ],
       "description": "",
       "group": "SPACE_ID_PLACE_HOLDER",
@@ -158,7 +158,7 @@
         "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"query\":{\"query_string\":{\"query\":\"type:liberty_accesslog\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647}}"
       },
       "sort": [
-        "ibm_sequence.raw",
+        "ibm_sequence_str.keyword",
         "desc"
       ],
       "title": "Liberty Access Logs Search",
